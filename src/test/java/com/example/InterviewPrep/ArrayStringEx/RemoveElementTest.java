@@ -31,4 +31,15 @@ public class RemoveElementTest {
     assertEquals(5, k);
     assertArrayEquals(expected, nums);
   }
+
+  @Test
+  void ShouldSuccess_OnLength1() {
+    int[] nums = { 1 };
+    int[] expected = { 0 };
+    int val = 1;
+
+    int k = remover.removeElement(nums, val);
+    assertEquals(0, k);
+    assertArrayEquals(expected, nums);
+  }
 }
